@@ -9,7 +9,7 @@ import { ShakeAnimation } from '../../components/ShakeAnimatios';
 // todo add online rating
 // todo maybe add timer
 
-export function MainScreen(): JSX.Element {
+export function MainScreen({ navigation }: any): JSX.Element {
 
     type TDice = {
         id: number,
@@ -111,8 +111,7 @@ export function MainScreen(): JSX.Element {
 
     return (
         <>
-            <View>
-
+            <View style={styles.root}>
                 <View style={styles.block}>
                     <View>
                         {isWon
@@ -123,12 +122,11 @@ export function MainScreen(): JSX.Element {
                                     Check my GitHub for... something interesting
                                 </Text>
                             </>
-
                             :
                             <>
-                                <Text style={styles.h1}>Tenzies</Text>
+                                <Text style={styles.h1}>How to play:</Text>
                                 <Text style={styles.h2}>Roll until all dice are the same.</Text>
-                                <Text style={styles.h2}>Click each die to freeze it at its current value between rolls.</Text>
+                                <Text style={styles.h2}>Press each die to freeze its value.</Text>
                             </>
                         }
                     </View>
@@ -139,14 +137,19 @@ export function MainScreen(): JSX.Element {
                     </ShakeAnimation>
                     <View>
                         <View style={styles.tools}>
-                            <View>
-                                <Text style={styles.h2}>Roll counter:</Text>
-                                <Text style={styles.h2}>{count}</Text>
-                            </View>
                             <TouchableOpacity onPress={changeDifficulty}>
                                 <View >
                                     <Text style={styles.h2}>Difficulty: </Text>
                                     <Text style={styles.h2}>{diffName}</Text>
+                                </View>
+                            </TouchableOpacity>
+                            <View>
+                                <Text style={styles.h2}>Roll counter:</Text>
+                                <Text style={styles.h2}>{count}</Text>
+                            </View>
+                            <TouchableOpacity onPress={() => navigation.navigate('Score')}>
+                                <View style={styles.button2}>
+                                    <Text style={styles.button2Text}>My score</Text>
                                 </View>
                             </TouchableOpacity>
                         </View>
@@ -160,7 +163,6 @@ export function MainScreen(): JSX.Element {
                     <Text style={styles.a}> Eugene Kononenko</Text>
                 </Text>
             </View>
-            {/* <Score /> */}
         </>
     )
 }

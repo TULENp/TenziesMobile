@@ -1,12 +1,14 @@
 
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet } from 'react-native';
+import { Navigation } from './navigation/Navigation';
 import { MainScreen } from './screens/MainScreen';
 
 export default function App() {
 	return (
-		<SafeAreaView style={styles.container}>
-			<MainScreen />
-		</SafeAreaView>
+			<Navigation/>
+		// <SafeAreaView style={styles.container}>
+		// 	<MainScreen />
+		// </SafeAreaView>
 	);
 }
 

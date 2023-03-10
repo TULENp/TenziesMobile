@@ -1,19 +1,21 @@
 import { StyleSheet } from 'react-native';
-//react native border radius style 
+
 export const styles = StyleSheet.create({
     root: {
+        alignItems: 'center',
+        // justifyContent: 'space-evenly',
         padding: 10,
-        textAlign: 'center',
+        minWidth: 100,
     },
     a: {
         fontWeight: '700',
         fontSize: 20,
         color: '#4A4E74',
-        textAlign:'center',
+        textAlign: 'center',
     },
     h1: {
         fontWeight: '700',
-        fontSize: 35,
+        fontSize: 30,
         color: '#2B283A',
         margin: 10,
         textAlign: 'center',
@@ -34,7 +36,6 @@ export const styles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
-        padding: 24,
     },
     infoLink: {
         color: '#4A4E74',
@@ -43,7 +44,7 @@ export const styles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginBottom:20,
+        marginBottom: 15,
     },
     toolsH2: {
         margin: '0.5rem',
@@ -58,6 +59,18 @@ export const styles = StyleSheet.create({
     buttonText: {
         fontWeight: '700',
         fontSize: 45,
+        color: '#FFFFFF',
+    },
+    button2: {
+        backgroundColor: '#5035FF',
+        borderRadius: 10,
+        padding: 10,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    button2Text: {
+        fontWeight: '700',
+        fontSize: 20,
         color: '#FFFFFF',
     },
     dice: {
