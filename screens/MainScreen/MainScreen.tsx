@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Die } from '../../components/Die/Die';
 import { TouchableOpacity, View, Text, Button, Linking } from 'react-native';
 import { styles } from './styles';
-import { ShakeAnimation } from '../../components/ShakeAnimatios';
+import { ShakeAnimation } from '../../components/ShakeAnimation';
 
 
 // todo Save best time to localStorage
